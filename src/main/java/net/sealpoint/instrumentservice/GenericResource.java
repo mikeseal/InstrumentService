@@ -37,11 +37,11 @@ public class GenericResource {
      * @return an instance of java.lang.String
      */
     @GET
-    @Produces(MediaType.APPLICATION_XML)
-    public String getXml() {
-        return "GET for generic rest service response";
-        //TODO return proper representation object
-        //throw new UnsupportedOperationException();
+    @Produces(MediaType.APPLICATION_JSON)
+    public Instrument getXml() {
+        Instrument returnObj = new Instrument();
+        returnObj.setIdentifier("1234");
+        return returnObj;
     }
 
     /**
